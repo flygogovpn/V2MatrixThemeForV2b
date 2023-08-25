@@ -115,7 +115,7 @@ function responsegetjilu(code,data){
       c.innerHTML = getshijian(a[x].record_at);
       d.innerHTML = '上行:'+(a[x].u/1024/1024/1024).toFixed(2)+'GB';
       e.innerHTML = a[x].server_rate+'X';
-      f.innerHTML = '上行:'+(a[x].d/1024/1024/1024).toFixed(2)+'GB';
+      f.innerHTML = '下行:'+(a[x].d/1024/1024/1024).toFixed(2)+'GB';
       g.innerHTML = '合计:'+(a[x].d/1024/1024/1024+a[x].u/1024/1024/1024).toFixed(2)+'GB';
 
       b.appendChild(c);
