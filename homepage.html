@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head prefix="og: http://ogp.me/ns#">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>v2Matrix——仪表台</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+       <meta name="keywords" content="v2Matrix,v2Matrix加速器，v2Matrix浏览器，13xVPN，小黑牛VPN，小黑牛加速器，佛跳墙VPN，佛跳墙加速器，外网VPN，外网加速器，旋风VPN，旋风加速器，老王VPN，老王加速器，蓝灯VPN，蓝灯加速器，雷霆VPN，雷霆加速器，天行VPN，天行加速器，神灯VPN，神灯加速器，蚂蚁VPN，蚂蚁加速器，坚果VPN，坚果加速器">
+   <meta name="description" content="v2Matrix">
+    
+    <!-- Canonical links -->
+    <link rel="canonical" href="www.v2matrix.com/index.html">
+    <!-- Alternative links -->
+    <link rel="alternative" hreflang="en" href="www.v2matrix.com/index.html">
+    <link rel="alternative" hreflang="zh-CN" href="www.v2matrix.com/index.html">
+      
+    <!-- Icon -->
+    <link rel="icon" type="image/png" href="./img/favicon.ico"> 
+    <!-- 宽度大于 900px 的屏幕使用该样式 -->
+    <link rel="stylesheet" media="screen and (min-width: 451px)" href="./static/liteboardpc.css">
+    <!-- 宽度小于或等于 600px 的屏幕使用该样式 -->
+    <link rel="stylesheet" media="screen and (max-width: 450px)" href="./static/liteboardwap.css">
+    <link rel="stylesheet" href="./static/jiazai.css">
+    <script type="text/javascript" src="./static/iframe.js"></script>
+    <script type="text/javascript" src="./static/homepage.js"></script>
+     
+  </head>
+
+<body class="top" style="background-color: #ffffff;" onload="bootcheck()">
+
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="更换为你自己的Crispekey";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+
+<!--End of Tawk.to Script-->
+<div class="head" >
+  <div class="head_width">
+    <img src="./img/head.jpg" class="head_img" onclick='window.location.href="./homepage.html"'></img>
+    <img src="./img/person.svg" class="head_login" onclick="openlogout()"></img>
+  </div>
+</div>
+
+<!--顶部灰色-->
+<div class="background_gary">
+  <div class="sub_width">
+    <div class="sub_left">
+      <p class="gary_p">v2Matrix</p>
+    </div>
+  </div>
+</div>
+
+<div class="fatherbox">
+  <!--菜单-->
+  <div class="menubox">
+     <p class="menutitle">菜单选项<img class="menubox_icon_xia"src="./img/xia.svg" id="openmenu" ><img class="menubox_icon_shang"src="./img/shang.svg"  id="closemenu" ></p>
+     <ul class="menulistul" id="menulistul">
+      <li class="lilist"><a href="./homepage.html" class="menulist-choose">仪表台</a></li>
+      <li class="lilist"><a href="./download.html" class="menulist">应用下载</a></li>
+      <li class="lilist"><a href="./shop.html" class="menulist">购买订阅</a></li>
+      <li class="lilist"><a href="./outline.html" class="menulist">Outline连接</a></li>
+      <li class="lilist"><a href="./sanfang.html" class="menulist">其他应用连接</a></li>
+      <li class="lilist"><a href="./node.html" class="menulist">节点状态</a></li>
+      <li class="lilist"><a href="./order.html" class="menulist">我的订单</a></li>
+      <li class="lilist"><a href="./invite.html" class="menulist">邀请好友</a></li>
+      <li class="lilist"><a href="./setting.html" class="menulist">个人设置</a></li>
+      <li class="lilist"><a href="./liuliang.html" class="menulist">流量明细</a></li>
+      <li class="lilist"><a href="./ticket.html" class="menulist">我的工单</a></li>
+
+     </ul>
+  </div>
+
+   <!--右侧内容-->
+   <div class="neirongright">
+     <!--公告部分-->
+    <div class="gonggao">
+      <div class="gonggao_title">
+        <img src="./img/gonggao.svg" class="gonggao_img" style="width: 20px;">
+        <p class="gonggao_words">系统公告</p>
+      </div>
+      <div class="gonggao_down">
+        <div class="gonggao_connect_left">
+          <p class="gonggao_connect" id="gonggao_connect">内容加载中...</p>
+          <div class="gonggao_button" onclick="opengonggao()">查看</div>
+        </div>
+        <div class="gonggao_connect_right">
+          <p class="gonggao_connect" id="gonggao_count">X/X</p>
+          <img class="gonggao_icon" src="./img/arrow-left-short.svg" onclick="shangyigegonggao()">
+          <img class="gonggao_icon" src="./img/arrow-right-short.svg" onclick="nextgonggao()">
+        </div>
+      </div>
+    </div>
+
+    <!--提示信息-->
+    <div class="tishixinxi-box">
+      <div class="dingdantishi-box" id="dingdantishi-box" style="display: none;">
+         <a class='tishi-words-1' href="./order.html">您有一条订单未完成支付,前往查看</a>
+      </div>
+      <div class="gongdantishi-box" id="gongdantishi-box" style="display: none;">
+         <a class='tishi-words-2' href="./ticket.html">您有一条订单工单处理中,前往查看</a>
+      </div>
+    </div>
+
+
+
+
+     <!--我的订阅流量部分-->
+    <div class="liuliang">
+      <p class="itemtitle">我的订阅</p>
+      <div class="liuliang_down">
+        <div class="liuliang_title" >
+          <p id="liuliang_title">加载中....</p>
+          <button class="liuliang_button" id="liuliang_button" onclick="xufeianniu()">...</button>
+        </div> 
+        <p class="liuliang_des" id="liuliang_des">将于...过期,还有...天重置,还有...流量.</p>
+        <div class="liuliang_line_box" id="liuliang_line_box">
+          <div class="liuliang_line" id="liuliang_line"></div>
+        </div>
+        <p class="liuliang_des_2" id="liuliang_des_2">已使用...GB/...GB</p>
+      </div>
+    </div>
+
+    <!--快捷入口-->
+    <div class="kuaijie">
+      <p class="itemtitle">快捷入口</p>
+      <div class="kuaijie_down">
+        <div class="kuaijie_item" onclick="opendownload()">
+          <div class="kuaijie_item_left">
+            <p class="kuaijie_item_left_title">下载官方APP</p>
+            <p class="kuaijie_item_left_des">使用官方APP科学上网,点此下载</p>
+          </div>
+          <img class="kuaijie_item_icon" src="./img/logo.png">
+        </div>
+        <div class="kuaijie_item_line"></div>
+
+        <div class="kuaijie_item" onclick="openoutline()">
+          <div class="kuaijie_item_left">
+            <p class="kuaijie_item_left_title">使用Outline</p>
+            <p class="kuaijie_item_left_des">支持Outline,苹果设备免费下载</p>
+          </div>
+          <img class="kuaijie_item_icon" src="./img/outline-client-logo.svg">
+        </div>
+        <div class="kuaijie_item_line"></div>
+
+        <div class="kuaijie_item" onclick="opensanfang()">
+          <div class="kuaijie_item_left">
+            <p class="kuaijie_item_left_title">使用三方应用</p>
+            <p class="kuaijie_item_left_des">支持Clash、小火箭等三方应用</p>
+          </div>
+          <img class="kuaijie_item_icon" src="./img/stash.png">
+        </div>
+        <div class="kuaijie_item_line"></div>
+
+        <div class="kuaijie_item" onclick="openshop()">
+          <div class="kuaijie_item_left">
+            <p class="kuaijie_item_left_title">购买订阅</p>
+            <p class="kuaijie_item_left_des">购买高级会员VIP线路</p>
+          </div>
+          <img class="kuaijie_item_icon" src="./img/gouwu.svg">
+        </div>
+        <div class="kuaijie_item_line"></div>
+        
+      </div>
+    </div>
+   </div>
+</div>
+<!--页尾-->
+  <div class="yewei">
+    <div class="yewei_width">
+      <p class="subtile" style="text-align:center;">
+        有问题? 请加入</br> 
+        <a href="https://t.me/v2matrixshare"><font color="#0360DF">Telegram群组</font></a>
+      </p>
+      <div>
+
+        <div class="yewei_link">
+        </div>
+        <p class="des" style="margin-top: 0px; margin-bottom: 20px; font-size: 14px;">Copyright @ 2023 v2Matrix</p>
+      </div>
+    </div>
+  </div>
+
+  <!--公告弹窗-->
+  <div class="tanbox-gonggao-zhezhao" id="tangonggao" style="display: none;" onclick="closegonggao()" >
+    <div class="tanbox-gonggao"  onclick="event.stopPropagation()">
+      <p class="gonggao_name">系统公告</p>
+      <div class="gonggao_content_box">
+        <p class="gonggao_tan_title" id="gonggao_tan_title"> </p>
+        <p class="gonggao_tan_content" id="gonggao_tan_content"> </p>
+      </div>
+      <button class="gonggao_tan_button" onclick="closegonggao()">我知道了</button>
+    </div>
+  </div> 
+
+
+
+
+  <div class="tanbox-right" id='tanright' style="display: none;"></div>
+  <!--错误弹窗-->
+  <div class="tanbox-cuowu" id='tancuowu' style="display: none;" ></div>
+  <!--加载动画-->
+  <div class="tanbox-jiazai" id='tanjiazai'style="display: none;" ><div class="loader"></div></div> 
+
+  <!--退出弹窗-->
+  <div class="tanbox-tuichu" id="tantuichu" style="display: none;">
+    <img src="./img/logo.png" class="logout_img">
+    <p class="logout_words" id="logout_words">v2matrix</p>
+    <button class="logout_button" onclick="exitlogout()">退出登录</button>
+    <button class="logout_button_quxiao" onclick="closelogout()">关闭窗口</button>
+  </div>
+
+
+
+</body>
+</html>

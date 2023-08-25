@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head prefix="og: http://ogp.me/ns#">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>v2Matrix——登录/注册</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="v2Matrix,v2Matrix加速器，v2Matrix浏览器，13xVPN，小黑牛VPN，小黑牛加速器，佛跳墙VPN，佛跳墙加速器，外网VPN，外网加速器，旋风VPN，旋风加速器，老王VPN，老王加速器，蓝灯VPN，蓝灯加速器，雷霆VPN，雷霆加速器，天行VPN，天行加速器，神灯VPN，神灯加速器，蚂蚁VPN，蚂蚁加速器，坚果VPN，坚果加速器">
+    <meta name="description" content="v2Matrix">
+    
+    <!-- Canonical links -->
+    <link rel="canonical" href="www.v2matrix.com/index.html">
+    <!-- Alternative links -->
+    <link rel="alternative" hreflang="en" href="www.v2matrix.com/index.html">
+    <link rel="alternative" hreflang="zh-CN" href="www.v2matrix.com/index.html">
+      
+    <!-- Icon -->
+    <link rel="icon" type="image/png" href="./img/favicon.ico"> 
+    <!-- 宽度大于 900px 的屏幕使用该样式 -->
+    <link rel="stylesheet" media="screen and (min-width: 451px)" href="./static/litestylepc.css">
+    <!-- 宽度小于或等于 600px 的屏幕使用该样式 -->
+    <link rel="stylesheet" media="screen and (max-width: 450px)" href="./static/litestylewap.css">
+    <link rel="stylesheet" href="./static/jiazai.css">
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+    async defer></script>
+    <script type="text/javascript" src="./static/loginjs.js"></script> 
+  </head>
+
+<body class="top" style="background-color: #FBFBFE;" onload="bootcheck()">
+   
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+      window.$crisp=[];window.CRISP_WEBSITE_ID="更换为你自己的Crispekey";
+      (function(){d=document;
+        s=d.createElement("script");
+        s.src="https://client.crisp.chat/l.js";s.async=1;
+        d.getElementsByTagName("head")[0].appendChild(s);
+      })
+      ();
+  </script>
+<!--End of Tawk.to Script-->
+
+  <div class="fatherbox">
+    <!--登录页面-->
+    <div class="loginbox" id="loginbox">
+      <img class="login_logo" src="./img/logo.png"  ></img>
+      <p class="logintitle">请您登录</p>
+      <p class="loginsubtile">进入v2Matrix - 用过都说香</p>
+      <input class="inputbox" type="text" placeholder="请输入邮箱" id="regusername"></input>
+      <input class="inputbox" type="password" placeholder="请输入密码" id="regpassword"></input>
+      <button class="loginbutton" onclick="regrequest()">立即登录</button>
+      <div class="loginlinkbox">
+        <p class="loginlinktext" onclick="gobox('regbox');buildrequest()">立即注册</p>
+        <p class="loginlinktext" onclick="gobox('forgot');buildrequest()">忘记密码</p>
+      </div>
+    </div>
+
+    <!--注册页面-->
+    <div class="loginbox" style="display: none;" id="regbox">
+      <img class="login_logo" src="./img/logo.png"></img>
+      <p class="logintitle">请您注册</p>
+      <p class="loginsubtile">以获取进入v2Matrix权限</p>
+      <div class="loginregbox">
+        <input class="inputbox-reg" type="text" placeholder="请输入邮箱" id="emailinput"></input> 
+        <select class="inputbox-reg-list" type="text" id="emaillistbox"></select> 
+      </div>
+      <div class="loginregbox" id="emailcode">
+        <input class="inputbox-reg" type="text" placeholder="请输入验证码" id="emailverify"></input> 
+        <button class="inputbox-reg-mes" id="emailbutton" onclick="emailrequest()">获取验证码</button>
+        </select> 
+      </div>
+      <input class="inputbox" type="password" placeholder="请输入密码" id="regpd"></input>
+      <input class="inputbox" type="password" placeholder="请确认密码" id="reregpd"></input>
+      <input class="inputbox" type="text" placeholder="请输入邀请码(选填)" id="inviteforce"></input>
+      <button class="loginbutton"  onclick="zhucerequest()">立即注册</button>
+      <div class="loginlinkbox">
+        <p class="loginlinktext" onclick="gobox('loginbox')">返回登录</p>
+        <p class="loginlinktext">&nbsp;</p>
+      </div>
+    </div>
+
+    <!--忘记密码页面-->
+    <div class="loginbox" style="display: none;" id="forgotbox">
+      <img class="login_logo" src="./img/logo.png"></img>
+      <p class="logintitle">请重置密码</p>
+      <p class="loginsubtile">以获取进入v2Matrix权限</p>
+      <input class="inputbox" type="text" placeholder="请输入邮箱" id="forgotemail"></input>
+      <div class="loginregbox">
+        <input class="inputbox-reg" type="text" placeholder="请输入验证码" id="forgotemailcode" ></input> 
+        <button class="inputbox-reg-mes" id="forgotemailbutton" onclick="emailrequest_forgot()">获取验证码</button>
+        </select> 
+      </div>
+      <input class="inputbox" type="password" placeholder="请输入新密码" id="forgotemailpd"></input>
+      <input class="inputbox" type="password" placeholder="请确认新密码" id="forgotemailrepd"></input>
+      <button class="loginbutton" onclick="forgotrequest()">立即重置</button>
+      <div class="loginlinkbox">
+        <p class="loginlinktext" onclick="gobox('loginbox')">返回登录</p>
+        <p class="loginlinktext">&nbsp;</p>
+      </div>
+    </div>
+
+    <!--支付完毕-->
+    <div class="loginbox" id="payfinish" style="display: none;">
+      <img src="./img/wancheng.svg" class="payimg">
+      <p class="paywancheng">支付成功</p>
+      <div class="paywords_group">
+        <p class="paywords">订单号:</p>
+        <p class="paywords" id="dingdanhao">000000000000000</p>
+      </div>
+      <div class="paywords_group">
+        <p class="paywords">支付金额:</p>
+        <p class="paywords" id="dingdanjine">¥0.00</p>
+      </div>
+      <div class="paywords_group">
+        <p class="paywords">支付结果:</p>
+        <p class="paywords">支付成功</p>
+      </div>
+
+      <a class="paygoapp1111" href="flygogo://main">回到APP</a>
+      <a class="paygohomepage" href="./homepage.html">进入控制面板</a>
+    
+    </div>
+
+    <!--正确弹窗-->
+    <div class="tanbox-right" id='tanright' style="display: none;"></div>
+    <!--错误弹窗-->
+    <div class="tanbox-cuowu" id='tancuowu' style="display: none;" ></div>
+    <!--加载动画-->
+    <div class="tanbox-jiazai" id='tanjiazai' style="display: none;"><div class="loader"></div></div>
+    <!--recaptcha-->
+    <div class="tanbox-recaptcha" id='tanrecaptcha_email' style="display: none;" onclick="closeemail()"><div id="recap1"></div></div>
+    <div class="tanbox-recaptcha" id='tanrecaptcha_reg' style="display: none;" onclick="closereg()"><div id="recap2"></div></div>
+    <div class="tanbox-recaptcha" id='tanrecaptcha_email_forgot' style="display: none;" onclick="closeforgot()"><div id="recap3"></div></div>
+  </div>
+
+</body>
+</html>
