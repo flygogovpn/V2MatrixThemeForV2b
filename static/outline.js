@@ -10,7 +10,7 @@ function bootcheck(){
   }
 }
 
-var domain = "www.v2matrix.com";
+ var domain = "";
 
 /*网络请求*/
 function jsonlink(mode,link,params,callback){

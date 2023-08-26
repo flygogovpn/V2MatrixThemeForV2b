@@ -102,7 +102,7 @@ function gobox(mode){
   }
 
   /*域名*/
-var domain = "www.v2matrix.com";
+ var domain = "";
   /*请求登录接口*/
 function regrequest(){
     let mode = 'POST';
